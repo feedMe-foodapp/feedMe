@@ -1,13 +1,27 @@
+/* React */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+/* React-Redux */
+import {
+  Provider
+} from 'react-redux';
+
+import {
+  store
+} from 'src/redux/store';
+
+/* Component(s) */
+import App from './App';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
