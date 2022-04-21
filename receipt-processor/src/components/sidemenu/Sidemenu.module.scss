@@ -1,0 +1,89 @@
+/* Stylesheet of Sidemenu.tsx */
+
+@import 'src/shared/animation/animation.scss';
+
+.sidemenu {
+    height: 100%;
+
+    .content_container {
+        height: 100%;
+        --background: var(--ion-color-primeColor);  
+
+        .wrapper_container {
+            .list_container {
+                background: transparent;
+
+                .btn {
+                    padding: 0px 8px 0px 0px;
+                    margin: 0;
+                    height: 54px;
+                    text-transform: none;
+                    --background: transparent;
+                    --box-shadow: none;
+                    --background-hover: rgba(119,204,218);
+                    font-size: 14px;
+                    --border-radius: 0px 32px 32px 0px;
+            
+                    .icon {
+                        position: absolute;
+                        left: 8px;
+                        font-size: 24px;
+                    }
+            
+                    .icon_active {
+                        @extend .icon;
+                        animation: rotating_icon $rotating_animation;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* set Media Queries for different display sizes and orientation of devices */
+
+@media screen and (min-width: 512px) {
+    .sidemenu {
+        .content_container {
+            .wrapper_container {
+                .list_container {
+                    .btn {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1200px) {
+    .sidemenu {
+        .content_container {
+            .wrapper_container {
+                .list_container {
+                    .btn {
+                        .icon {
+                            left: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1720px) {
+    .sidemenu{
+        .content_container {
+            .wrapper_container {
+                .list_container {
+                    .btn {
+                        .icon {
+                            left: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

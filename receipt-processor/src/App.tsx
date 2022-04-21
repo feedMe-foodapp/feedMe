@@ -2,21 +2,17 @@
 /* React */
 import React from 'react';
 
-import { 
-  Redirect, 
-  Route 
-} from 'react-router-dom';
-
 /* Ionic */
 import { 
   IonApp, 
-  IonRouterOutlet, 
   setupIonicReact 
 } from '@ionic/react';
 
-import { 
-  IonReactRouter 
-} from '@ionic/react-router';
+/* Util(s) */
+import MainRouter from 'src/utils/router/MainRouter';
+
+/* Component(s) */
+import ToastContainer from 'src/components/toast-container/ToastContainer';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,16 +37,8 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          
-        </Route>
-        <Route path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
+    <MainRouter />
+    <ToastContainer />
   </IonApp>
 );
 

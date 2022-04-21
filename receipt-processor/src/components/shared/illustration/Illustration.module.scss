@@ -1,0 +1,69 @@
+/* Stylesheet of Illustration.tsx */
+
+@import 'src/shared/animation/animation.scss';
+
+.illustration_container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .block_container {
+        text-align: center;
+
+        .icon {
+            padding: 12px;
+            font-size: 121px;
+            color: #d2d7e2;
+        }
+    
+        .icon_animated {
+            animation: $glass;
+        }
+    
+        .label {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 18px;
+            color: #D6DBE4;
+
+            .dot_container {
+                margin: 12px 0px 0px 8px;
+
+                .commonClass {
+                    font-size: 18px;
+                }
+
+                .dot1 {
+                    animation: blinking $dot1
+                }
+
+                .dot2 {
+                    animation: blinking $dot2;
+                }
+
+                .dot3 {
+                    animation: blinking $dot3;
+                }
+            }
+            
+        }
+    }
+}
+
+/* set Media Queries for different display sizes and orientation of devices */
+
+@media screen and(min-width: 512px) {
+    .illustration_container {
+        .block_container {
+            .icon {
+                font-size: 162px;
+            }
+
+            .label {
+                font-size: 21px;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+/* Stylesheet of ReceiptUploader.tsx */
+
+.fab_container {
+    right: 18px;
+    bottom: 16px;
+    
+    .fab_btn {
+        --background: var(--ion-color-secondColor);
+    }
+}

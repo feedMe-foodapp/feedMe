@@ -1,0 +1,65 @@
+/* Stylesheet of ReceiptProcessor.tsx */
+
+.receipt_processor {
+    width: 90%;
+
+    .label {
+        margin: 0px 0px 21px 0px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.75;
+
+        span {
+            color: var(--ion-color-secondColor);
+        }   
+    }
+
+    .btn {
+        height: 42px;
+        font-size: 16px;
+        text-transform: none;
+        --border-radius: 52px;
+
+        .icon {
+            position: absolute;
+            left: 12px;
+            font-size: 21px;
+        }
+    }
+}
+
+/* set Media Queries for different display sizes and orientation of devices */
+
+@media screen and(min-width: 512px) {
+    .receipt_processor {
+        width: 75%;
+
+        .label {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and(min-width: 1200px) {
+    .receipt_processor {
+        width: 80%;
+    }
+}
+
+@media screen and(min-width: 1620px) {
+    .receipt_processor {
+        width: 75%;
+
+        .label {
+            font-size: 18px;
+        }
+
+        .btn {
+            height: 46px;
+
+            .icon {
+                font-size: 24px;
+            }
+        }
+    }
+}
