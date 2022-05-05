@@ -53,7 +53,7 @@ const ReceiptProcessorContainer: React.FC<ReceiptProcessorContainerProps> = ({ r
         setIsProcessing(value);
     };
 
-    // console.log(result);
+    console.log(result);
 
     return (
         <React.Fragment>
